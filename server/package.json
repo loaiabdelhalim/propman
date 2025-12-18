@@ -1,0 +1,50 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Express.js server with PostgreSQL",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "TMPDIR=/tmp ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prisma:generate": "TMPDIR=/tmp prisma generate",
+    "prisma:migrate": "TMPDIR=/tmp prisma migrate dev",
+    "prisma:studio": "TMPDIR=/tmp prisma studio",
+    "prisma:seed": "ts-node prisma/seed.ts",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "express",
+    "postgresql",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.7.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "groq-sdk": "^0.37.0",
+    "multer": "^2.0.2",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^30.0.0",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^20.19.27",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.2.0",
+    "prisma": "^5.7.1",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
